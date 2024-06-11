@@ -14,8 +14,11 @@ import FunctionProp from "./04-06/FunctionProp";
 import StyledComponents from "./04-06/StyledComponents";
 import InlineStyling from "./04-06/InlineStyling";
 import Todo from './06-06/Todo';
-
-
+import Register from "./8-06/Register";
+import Login from "./8-06/Login";
+import Login1 from './09-06/Login1';
+import Register1 from './09-06/Register1';
+import ParentChild from './09-06/ParentChild';
 
 function App() {
   return (
@@ -35,6 +38,13 @@ function App() {
         <Route path="/styled-components" element={<StyledComponents />} />
         <Route path="/inline-styling" element={<InlineStyling />} />
         <Route path="/todo" element={<Todo />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register1" element={<Register1 />} />
+        <Route path="/login1" element={<Login1 />} />
+        <Route path="/childparent" element={<ParentChild />} />
+
+
       </Routes>
     </div>
   );
