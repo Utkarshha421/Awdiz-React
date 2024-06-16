@@ -19,6 +19,7 @@ import Login from "./8-06/Login";
 import Login1 from './09-06/Login1';
 import Register1 from './09-06/Register1';
 import ParentChild from './09-06/ParentChild';
+import Loading from './11-06/Loading';
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
         <Route path="/register1" element={<Register1 />} />
         <Route path="/login1" element={<Login1 />} />
         <Route path="/childparent" element={<ParentChild />} />
+        <Route path="/loading" element={<Loading />} />
 
 
       </Routes>
