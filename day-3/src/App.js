@@ -20,6 +20,8 @@ import Login1 from './09-06/Login1';
 import Register1 from './09-06/Register1';
 import ParentChild from './09-06/ParentChild';
 import Loading from './11-06/Loading';
+import Reducer from './15-06/Reducer';
+import ReduxCounter from './20-06/ReduxCounter';
 
 function App() {
   return (
@@ -45,7 +47,8 @@ function App() {
         <Route path="/login1" element={<Login1 />} />
         <Route path="/childparent" element={<ParentChild />} />
         <Route path="/loading" element={<Loading />} />
-
+        <Route path="/reducer" element={<Reducer/>}/>
+        <Route path="/redux-counter" element={<ReduxCounter />} />
 
       </Routes>
     </div>

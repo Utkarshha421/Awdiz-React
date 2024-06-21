@@ -5,9 +5,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
 import { Toaster } from 'react-hot-toast';
+import MyContextProvider from './context/auth.context';
+import ThemeContextProvider from './context/theme.context';
+import { Provider } from 'react-redux';
+import store from "./redux/store";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <ThemeContextProvider>
+  <MyContextProvider>
   <BrowserRouter>
   <Toaster
   position="top-center"
@@ -34,8 +40,12 @@ root.render(
     },
   }}
 />
+<Provider store={store}>
     <App />
+    </Provider>
   </BrowserRouter>
+  </MyContextProvider>
+  </ThemeContextProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

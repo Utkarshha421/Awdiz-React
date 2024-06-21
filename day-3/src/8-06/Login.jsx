@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 
 const Login = () => {
+
   const router = useNavigate();
   const [userData, setUserData] = useState({
     email: "",
@@ -23,7 +24,7 @@ const Login = () => {
       if (userData.email && userData.password) {
         //   const response = await axios.post("https://awdiz-7/api/v1/user/login" , {userData});
         const response = {
-          data: { success: true, message: "Login successfull." },
+          data: { success: true, message: "Login successfull."},
         };
         if (response.data.success) {
           setUserData({
