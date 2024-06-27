@@ -49,7 +49,6 @@ function App() {
         <Route path="/loading" element={<Loading />} />
         <Route path="/reducer" element={<Reducer/>}/>
         <Route path="/redux-counter" element={<ReduxCounter />} />
-
       </Routes>
     </div>
   );
