@@ -22,6 +22,10 @@ import ParentChild from './09-06/ParentChild';
 import Loading from './11-06/Loading';
 import Reducer from './15-06/Reducer';
 import ReduxCounter from './20-06/ReduxCounter';
+import UseCallbackComponent from './29-06/UseCallbackComponent';
+import UseMemoComponent from './29-06/UseMemoComponent';
+import UseRef2Component from './30-06/UseRef2Component';
+import UseRefComponent from './30-06/UseRefComponent';
 
 function App() {
   return (
@@ -49,6 +53,10 @@ function App() {
         <Route path="/loading" element={<Loading />} />
         <Route path="/reducer" element={<Reducer/>}/>
         <Route path="/redux-counter" element={<ReduxCounter />} />
+        <Route path="/use-callback" element={<UseCallbackComponent />} />
+        <Route path="/use-memo" element={<UseMemoComponent />} />
+        <Route path="/use-ref" element={<UseRefComponent />} />
+        <Route path="/use-ref2" element={<UseRef2Component />} />
       </Routes>
     </div>
   );
