@@ -16,8 +16,6 @@ import InlineStyling from "./04-06/InlineStyling";
 import Todo from './06-06/Todo';
 import Register from "./8-06/Register";
 import Login from "./8-06/Login";
-import Login1 from './09-06/Login1';
-import Register1 from './09-06/Register1';
 import ParentChild from './09-06/ParentChild';
 import Loading from './11-06/Loading';
 import Reducer from './15-06/Reducer';
@@ -26,6 +24,9 @@ import UseCallbackComponent from './29-06/UseCallbackComponent';
 import UseMemoComponent from './29-06/UseMemoComponent';
 import UseRef2Component from './30-06/UseRef2Component';
 import UseRefComponent from './30-06/UseRefComponent';
+import Cart from './16-07/Cart';
+import RegisterAdmin from "./20-07/RegisterAdmin";
+import LoginAdmin from "./20-07/LoginAdmin";
 
 function App() {
   return (
@@ -47,8 +48,8 @@ function App() {
         <Route path="/todo" element={<Todo />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/register1" element={<Register1 />} />
-        <Route path="/login1" element={<Login1 />} />
+        <Route path="/register-admin" element={<RegisterAdmin />} />
+        <Route path="/login-admin" element={<LoginAdmin />} />
         <Route path="/childparent" element={<ParentChild />} />
         <Route path="/loading" element={<Loading />} />
         <Route path="/reducer" element={<Reducer/>}/>
@@ -57,6 +58,8 @@ function App() {
         <Route path="/use-memo" element={<UseMemoComponent />} />
         <Route path="/use-ref" element={<UseRefComponent />} />
         <Route path="/use-ref2" element={<UseRef2Component />} />
+        <Route path="/cart" element={<Cart />} />
+
       </Routes>
     </div>
   );

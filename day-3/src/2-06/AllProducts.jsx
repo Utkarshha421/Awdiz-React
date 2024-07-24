@@ -9,6 +9,7 @@ function AllProducts() {
     // alert("Hi from get Products.");
     try {
       const response = await axios.get("https://fakestoreapi.com/products");
+
       //   console.log(response.data);
       setAllProducts(response.data);
     } catch (error) {

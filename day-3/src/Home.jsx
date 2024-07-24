@@ -9,10 +9,11 @@ function Home() {
   return (
     <div
       style={{
-        backgroundColor: themeState.theme === "light" ? "pink" : "Green",
+        backgroundColor: themeState.theme === "light" ? "pink" : "grey",
       }}
     >
       <h1>Home page -{state?.user?.name}</h1>
+     
       <button
         onClick={() =>
           dispatch({ type: themeState?.theme === "light" ? "DARK" : "LIGHT" })
