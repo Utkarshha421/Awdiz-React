@@ -38,9 +38,11 @@ const RegisterAdmin = () => {
           });
           router("/login-admin");
           toast.success(response.data.message);
+        }else{
+          toast.error(response?.data?.error)
         }
       } else {
-        throw Error("All fields are mandatory.");
+        toast.error("All fields are mandatory.");
         // toast.error("All fields are mandatory.");
       }
     } catch (error) {
@@ -51,28 +53,10 @@ const RegisterAdmin = () => {
     }
   }
 
-  useEffect(() => {
-    const errorsArray = [];
-    if (!adminData.name) {
-      errorsArray.push("Name is required.");
-    }
-    if (!adminData.email) {
-      errorsArray.push("Email is required.");
-    }
-    if (!adminData.password) {
-      errorsArray.push("Password is required.");
-    }
-    setErrors(errorsArray);
-    if (errorsArray.length == 0) {
-      setDisable(false);
-    } else {
-      setDisable(true);
-    }
-  }, [adminData]);
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form action="" onSubmit={handleSubmit}>
         <h1>Register Admin</h1>
         <label>Name : </label>
         <br />
@@ -108,7 +92,7 @@ const RegisterAdmin = () => {
             ))}
           </div>
         )}
-        <input disabled={disable} type="submit" value="Register" />
+        <input type="submit" value="Register" />
         <br />
       </form>
     </div>

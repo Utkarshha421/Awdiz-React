@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+// import "./allproduct.css";
+import Api from "../axiosConfig";
 
 function AllProducts() {
   const [allProducts, setAllProducts] = useState([]);
@@ -8,10 +10,10 @@ function AllProducts() {
   async function GetProducts() {
     // alert("Hi from get Products.");
     try {
-      const response = await axios.get("https://fakestoreapi.com/products");
+      const response = await Api.get("/product/get-all-product");
 
       //   console.log(response.data);
-      setAllProducts(response.data);
+      setAllProducts(response.data.products);
     } catch (error) {
       console.log(error);
     }
@@ -36,18 +38,17 @@ function AllProducts() {
           <div
             style={{
               width: "23%",
-              height: "500px",
+              height: "300px",
               border: "2px solid black",
               marginBottom: "20px",
               fontSize:"12px",
             }}
           >
-            <img style={{ width: "50%", height: "30%" }} src={product.image} />
-            <p style={{}}>Title : {product.title}</p>
+            <img style={{ width: "80%", height: "50%" }} src={product.image} />
+            <p style={{}}>Name : {product.name}</p>
             <p>Price : {product.price}/-</p>
             <p>Category : {product.category}</p>
-            <p>Description : {product.description}</p>
-            {/* <p>Rating : {product.rating}</p> */}
+            <p>Quantity : {product.quantity}</p>
           </div>
         ))}
       </div>
